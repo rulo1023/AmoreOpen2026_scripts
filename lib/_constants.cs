@@ -9,6 +9,7 @@
 #define AUX_TEAM "aux"
 #define NO_TASKS "no-tasks"
 #define AUX_TASKS "aux-tasks"
+#define STAFF_AUXILIAR "staff-sala-aux"
 #define 333mbf_JUDGE "333mbf-judge"
 #define 333mbf_DELEGATE "333mbf-delegate"
 #define 444bf_JUDGE "444bf-judge"
@@ -17,12 +18,6 @@
 #define 555bf_JUDGE "555bf-judge"
 #define 555bf_SCRAMBLER "555bf-scrambler"
 #define 555bf_DELEGATE "555bf-delegate"
-
-Define("IsDelegating", And(HasRole(DELEGATE),
-                           Not(HasRole(ORGANIZER)),
-                           (WcaId() != "2015ROME03")))
-
-
 
 # Rooms
 #define FRONTON "Frontón"

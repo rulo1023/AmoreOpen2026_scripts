@@ -44,6 +44,9 @@ CreateMiscActivity("Check-in", "other-checkin", FRONTON, 2026-02-21T15:00, 2026-
 CreateMiscActivity("On-site registration", "other-checkin", FRONTON, 2026-02-21T09:30, 2026-02-21T10:00)
 CreateMiscActivity("Apertura de puertas", "other-checkin", FRONTON, 2026-02-22T09:45, 2026-02-22T10:00)
 
+CreateMiscActivity("Tutorial for new competitors", "other-tutorial", FRONTON, 2026-02-21T09:45, 2026-02-21T10:00)
+CreateMiscActivity("Tutorial for new competitors", "other-tutorial", FRONTON, 2026-02-21T15:00, 2026-02-21T15:20)
+
 CreateMiscActivity("Lunch", "other-lunch", FRONTON, 2026-02-21T14:00, 2026-02-21T15:00)
 CreateMiscActivity("Lunch", "other-lunch", FRONTON, 2026-02-22T13:55, 2026-02-22T15:10)
 

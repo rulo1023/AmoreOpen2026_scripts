@@ -35,3 +35,13 @@ Define("IsDelegating", And(HasRole(DELEGATE),
 # aqui he borrado cosas, revisar
 Define("AllStages", [RED, GREEN])
 Define("TestStages", [TEST1, TEST2])
+
+Define("EligibleVolunteer",
+       And(Registered(),
+           Not(HasRole(ORGANIZER)),
+           Not(HasRole(DELEGATE)),
+           Not(IsNull(WcaId()))))
+
+Define("IsDelegating", And(HasRole(DELEGATE),
+                           Not(HasRole(ORGANIZER))
+                           ))

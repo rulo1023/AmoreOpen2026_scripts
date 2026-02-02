@@ -1,32 +1,15 @@
 #include "_constants.cs"
 #include "_eligible_scramblers.cs"
 
-Define("EligibleVolunteer",
-       And(Registered(),
-           Not(HasRole(ORGANIZER)),
-           Not(HasRole(DELEGATE)),
-           Not(In(StringProperty(TEAM)),
-           Not(IsNull(WcaId()))))
-
-Define("EligibleJudge",
-       And(EligibleVolunteer(),
-           Not(In("judge", ArrayProperty(NO_TASKS)))))
-
 Define("EligibleRunner",
        And(EligibleVolunteer(),
-           Not(In("runner", ArrayProperty(NO_TASKS))),
-           (Age() < 30)))
+           (Age() < 45)))
 
 # Args:
 # 1: Event
-# En _jobs.cs
-
 Define("EligibleScrambler",
        And(EligibleVolunteer(),
-           Or(CompetingIn({1, Event}),
-              StringProperty(TEAM) == AUX_TEAM,
-              In(WcaId(), EquipoAuxiliarIDs())), 
-           Not(In("scrambler", ArrayProperty(NO_TASKS))),
+           Or(CompetingIn({1, Event}),(EventId({1, Event}) == "333bf")),
            CanScramble({1, Event})))
 
 # Args:
@@ -34,7 +17,7 @@ Define("EligibleScrambler",
 Define("Judges",
        Job("judge",
            {1, Number},
-           eligibility=EligibleJudge()))
+           eligibility=EligibleVolunteer()))
 
 # Args:
 # 1: Number of runners

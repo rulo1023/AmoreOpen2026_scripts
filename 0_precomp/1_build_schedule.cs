@@ -20,7 +20,7 @@ Map(AllStages(), CreateGroups(_333oh-r1, 3, 2026-02-21T12:50, 2026-02-21T14:00))
 Map(AllStages(), CreateGroups(_333-r1, 4, 2026-02-21T15:20, 2026-02-21T17:10))
 Map(AllStages(), CreateGroups(_sq1-r1, 2, 2026-02-21T17:10, 2026-02-21T17:50))
 Map(AllStages(), CreateGroups(_333bf-r1, 2, 2026-02-21T17:50, 2026-02-21T18:30))
-Map(AllStages(), CreateGroups(_pyram-r1, 3, 2026-02-21T18:30, 2026-02-21T19:40))
+Map(AllStages(), CreateGroups(_pyram-r1, 4, 2026-02-21T18:30, 2026-02-21T19:40))
 Map(AllStages(), CreateGroups(_skewb-r1, 3, 2026-02-21T19:40, 2026-02-21T20:35))
 
 # Main rooms - Sun morning

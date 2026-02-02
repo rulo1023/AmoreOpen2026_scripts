@@ -2,19 +2,18 @@
 
 AssignGroups(_333mbf-r1, [AssignmentSet("everyone", true, true)], attemptNumber=1, overwrite=true)
 
-# TODO finetunear los pesos
+# TODO finetunear los pesos, por ejemplo algun delegado más, quitar a ben de sala auxiliar
 
 AssignStaff(_333mbf-r1,
             true,
             Persons(true),
             [Job("judge",
-                 15, eligibility=EligibleVolunteer()),
-             Job("delegate",
-                 2, eligibility=IsDelegating())],
+                 15, eligibility=EligibleVolunteer())],
             [PersonPropertyScorer((Age() > 30), 15), PersonPropertyScorer(CompetingIn(_333bf), 20),
              PersonPropertyScorer(CompetingIn(_333), 10), PersonPropertyScorer((WcaId() == "2022MENE02"), 1000)],
             overwrite=true)
 
+ManuallyAssign([2015SALO01],_333mbf-r1, AUX, 1, "staff-delegate")
 
 CreateCompetitionGroupsAssignments([2015SANC18,2019CALO01,2017NICO01],
                                    "3x3x3 Multi-Blind Scrambling",
@@ -30,9 +29,10 @@ AssignStaff(_444bf-r1,
             true,
             Persons(true),
             [Job("judge",
-                 15, eligibility=EligibleVolunteer()),
-             Job("delegate",
-                 2, eligibility=IsDelegating())],
+                 15, eligibility=EligibleVolunteer())],
             [PersonPropertyScorer((Age() > 30), 15), PersonPropertyScorer(CompetingIn(_333bf), 20),
              PersonPropertyScorer(CompetingIn(_333), 10), PersonPropertyScorer((WcaId() == "2022MENE02"), 1000)],
             overwrite=true)
+
+ManuallyAssign([2012GONZ10],_444bf-r1, AUX, 1, "staff-scrambler")
+ManuallyAssign([2015SALO01],_444bf-r1, AUX, 1, "staff-delegate")

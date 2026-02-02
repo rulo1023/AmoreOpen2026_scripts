@@ -4,34 +4,6 @@
 #include "_scorers.cs"
 #include "_unavailabilities.cs"
 
-# Args:
-# 1: Round
-Define("AssignGroupsAux", AssignGroups({1, Round}, [AssignmentSet("everyone", true, true)], [], []))
-
-Define("AuxJobsNames",
-       [Tuple(_444bf, [Tuple("staff-judge", 444bf_JUDGE),
-                          Tuple("staff-scrambler", 444bf_SCRAMBLER),
-                          Tuple("staff-delegate", 444bf_DELEGATE)]),
-        Tuple(_555bf, [Tuple("staff-judge", 555bf_JUDGE),
-                          Tuple("staff-scrambler", 555bf_SCRAMBLER),
-                          Tuple("staff-delegate", 555bf_DELEGATE)])])
-
-
-
-
-# Args:
-# 1: Round
-Define("AssignStaffAux",
-       Map(["staff-judge", "staff-scrambler", "staff-delegate"],
-           ManuallyAssign(Persons(In(Switch(Arg<String>(), Switch(EventForRound({1, Round}), AuxJobsNames())),
-                                            ArrayProperty(AUX_TASKS))),
-                          {1, Round},
-                          AUX,
-                          1,
-                          Arg<String>())))
-
-
-
 
 # Args:
 # 1: Round
@@ -39,10 +11,7 @@ Define("AssignStaffAux",
 # 3: Assign Delegates
 Define("AssignGroupsStages",
        AssignGroups({1, Round},
-                    NormalRoundAssignmentSets({1, Round}, {2, Number}, {3, Boolean}), [], []))
-
-
-
+                    NormalRoundAssignmentSets({1, Round}, {2, Number}), [], [StationAssignmentRule(true, "ascending", PsychSheetPosition(EventForRound({1, Round})))],overwrite=true))
 
 # Args:
 # 1: Round
@@ -60,7 +29,9 @@ Define("AssignStaffStages",
                     Scramblers({5, Number}, EventForRound({1, Round})),
                     Delegates({6, Number})],
                    VolunteerScorers(EventForRound({1, Round}), {2, Date}),
-                   unavailable=Unavailable(Arg<Person>())))
+                   unavailable=Unavailable(Arg<Person>()),
+                   overwrite=true))
+
 
 # Args:
 # 1: Round

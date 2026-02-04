@@ -11,6 +11,11 @@ Define("TopCompetitorsSet",
                      (Stage() == RED),
                      true))
 
+Define("TopCompetitorsSet_2x2x3x3",
+       AssignmentSet("top3",
+                     (RoundPosition(PreviousRound({1, Round})) <= {2, Number}),
+                     (((Stage() == RED) && (GroupNumber()  == Length(Groups(Round()))))),
+                     true))
 
 Define("OrganizersSet",
        AssignmentSet("organizers",
@@ -22,20 +27,26 @@ Define("DelegatesSet",
                      IsDelegating(),
                      (Stage() == RED)))
 
+Define("GroupsForMulti",
+       [Tuple(_333, [1])])
+
 Define("MultiSet",
        AssignmentSet("multi",
-                     CompetingIn(_333mbf),
+                     In(2026-02-21T15:55, Map(AssignedGroups(), StartTime())),
                      In(GroupNumber(),
                         Switch(Event(),
                                GroupsForMulti()))))
 
+Define("GroupsFor444bf",
+       [Tuple(_444, [1]),
+        Tuple(_222, [3,4])])
 
-Define("444bfSet",
-       AssignmentSet("444set",
-                     CompetingIn(_444bf),
+Define("fourbfSet",
+       AssignmentSet("444bf",
+                     In(2026-02-21T10:30, Map(AssignedGroups(), StartTime())),
                      In(GroupNumber(),
                         Switch(Event(),
-                               GroupsForMulti()))))
+                               GroupsFor444bf()))))
 
 # Args:
 # 1: Include Delegates
@@ -44,9 +55,27 @@ Define("EveryoneSet", AssignmentSet("everyone", true, true))
 # Args:
 # 1: Round
 # 2: Number of top people
-# 3: Include Delegates
+
 Define("NormalRoundAssignmentSets",
-       [TopCompetitorsSet({1, Round}, {2, Number}),
+       Concat(If(In({1, Round}, [_222-r1, _444-r1]),
+                 [fourbfSet()],
+                 []),
+              If(In({1, Round},  [_333-r1]),
+                 [MultiSet()],
+                 []),
+              [TopCompetitorsSet({1, Round}, {2, Number}),
+              OrganizersSet(),
+              DelegatesSet(),
+              EveryoneSet()]))
+
+# Args:
+# 1: Round
+# 2: Number of top people
+
+Define("NormalRoundAssignmentSets2x2x3x3",
+       [TopCompetitorsSet2x2x3x3({1, Round}, {2, Number}),
        OrganizersSet(),
        DelegatesSet(),
        EveryoneSet()])
+
+

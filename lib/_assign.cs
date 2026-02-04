@@ -13,6 +13,11 @@ Define("AssignGroupsStages",
        AssignGroups({1, Round},
                     NormalRoundAssignmentSets({1, Round}, {2, Number}), [], [StationAssignmentRule(true, "ascending", PsychSheetPosition(EventForRound({1, Round})))],overwrite=true))
 
+Define("AssignGroups2x2x3x3",
+       AssignGroups({1, Round},
+                    NormalRoundAssignmentSets2x2x3x3({1, Round}, {2, Number}), [], [StationAssignmentRule(true, "ascending", RoundPosition(PreviousRound({1, Round})))],overwrite=true))
+
+
 # Args:
 # 1: Round
 # 2: Date of the round

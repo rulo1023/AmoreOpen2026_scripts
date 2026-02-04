@@ -1,5 +1,6 @@
 #include "../lib/_constants.cs"
 
+
 CreateRoom(FRONTON, "#304a96")
 CreateRoom(RED, "#ff0000")
 CreateRoom(GREEN, "#60c828")
@@ -12,8 +13,8 @@ CreateGroups(_333mbf-r1-a1, 1, AUX, 2026-02-21T15:55, 2026-02-21T17:10, useStage
 CreateMiscActivity("Multi Blind cube submission", "other-multi", AUX, 2026-02-21T15:00, 2026-02-21T15:20)
 
 # Main rooms - Sat morning
-Map(AllStages(), CreateGroups(_444-r1, 3, 2026-02-21T10:00, 2026-02-21T11:20))
-Map(AllStages(), CreateGroups(_222-r1, 4, 2026-02-21T11:20, 2026-02-21T12:50))
+Map(AllStages(), CreateGroups(_444-r1, 4, 2026-02-21T10:00, 2026-02-21T11:30))
+Map(AllStages(), CreateGroups(_222-r1, 4, 2026-02-21T11:30, 2026-02-21T12:50))
 Map(AllStages(), CreateGroups(_333oh-r1, 3, 2026-02-21T12:50, 2026-02-21T14:00))
 
 # Main rooms - Sat afternoon

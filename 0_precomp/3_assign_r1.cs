@@ -10,8 +10,14 @@ Map([_444-r1, _222-r1, _333oh-r1, _333-r1, _sq1-r1, _333bf-r1, _pyram-r1, _skewb
                        TopCompetitorsPerRound(Arg<Round>())
                        ))
 
-Map([_444-r1, _222-r1, _333oh-r1, _333-r1],
-    AssignStaffStages(Arg<Round>(), 2025-12-06, 20, 4, 4, 1))
+
+AssignStaffStages(_444-r1, 2025-12-06, 20, 4, 4, 1)
+
+AssignStaffStages(_222-r1, 2025-12-06, 20, 4, 4, 1)
+
+AssignStaffStages(_333oh-r1, 2025-12-06, 20, 4, 4, 1)
+
+AssignStaffStages(_333-r1, 2025-12-06, 20, 4, 4, 1)
 
 AssignStaffStages(_sq1-r1, 2025-12-06, 16, 3, 3, 1)
 

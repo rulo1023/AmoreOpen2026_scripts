@@ -1,10 +1,18 @@
-Define("ScrambleLimits",
+Define("ScrambleLimits1",
        [Tuple(_333, 20s),
         Tuple(_222, 8s),
         Tuple(_444, 1:00s),
         Tuple(_pyram, 8s),
         Tuple(_skewb, 8s),
         Tuple(_sq1, 20s)])
+
+Define("ScrambleLimits",
+       [Tuple(_333, 10s),
+        Tuple(_222, 5s),
+        Tuple(_444, 50s),
+        Tuple(_pyram, 6s),
+        Tuple(_skewb, 6s),
+        Tuple(_sq1, 15s)])
 
 Define("EventsToScramblingEvents",
        [Tuple(_333, _333),

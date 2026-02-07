@@ -11,10 +11,10 @@ Define("TopCompetitorsSet",
                      (Stage() == RED),
                      true))
 
-Define("TopCompetitorsSet_2x2x3x3",
+Define("TopCompetitorsSet2x2x3x3",
        AssignmentSet("top3",
                      (RoundPosition(PreviousRound({1, Round})) <= {2, Number}),
-                     (((Stage() == RED) && (GroupNumber()  == Length(Groups(Round()))))),
+                     ((Stage() == "Rojo") && (GroupNumber() == Length(Groups(Round())))),
                      true))
 
 Define("OrganizersSet",

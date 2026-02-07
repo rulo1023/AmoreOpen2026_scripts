@@ -25,7 +25,7 @@ Map(AllStages(), CreateGroups(_pyram-r1, 4, 2026-02-21T18:30, 2026-02-21T19:40))
 Map(AllStages(), CreateGroups(_skewb-r1, 3, 2026-02-21T19:40, 2026-02-21T20:35))
 
 # Main rooms - Sun morning
-Map(AllStages(), CreateGroups(_333-r2, 2, 2026-02-22T10:00, 2026-02-22T11:10))
+Map(AllStages(), CreateGroups(_333-r2, 3, 2026-02-22T10:00, 2026-02-22T11:10))
 CreateGroups(_skewb-r2, 1, RED, 2026-02-22T11:10, 2026-02-22T11:30)
 CreateGroups(_pyram-r2, 1, RED, 2026-02-22T11:30, 2026-02-22T11:50)
 CreateGroups(_sq1-r2, 1, RED, 2026-02-22T11:50, 2026-02-22T12:10)

@@ -3,6 +3,7 @@
 #define DATAENTRY "staff-dataentry"
 #define ORGANIZER "organizer"
 #define DELEGATE "delegate"
+#define TRAINEE_DELEGATE "trainee-delegate"
 #define CORE_VOLUNTEER "core-volunteer"
 #define AES_TEAM "aes"
 #define DATA_TEAM "data"
@@ -35,7 +36,9 @@ Define("EligibleVolunteer",
        And(Registered(),
            Not(HasRole(ORGANIZER)),
            Not(HasRole(DELEGATE)),
-           Not(IsNull(WcaId()))))
+           Not(IsNull(WcaId())),
+           Not(HasRole(TRAINEE_DELEGATE))
+           ))
 
 Define("IsDelegating", And(HasRole(DELEGATE),
                            Not(HasRole(ORGANIZER))

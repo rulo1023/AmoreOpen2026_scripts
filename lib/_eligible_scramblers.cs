@@ -12,7 +12,7 @@ Define("ScrambleLimits",
         Tuple(_444, 50s),
         Tuple(_pyram, 6s),
         Tuple(_skewb, 6s),
-        Tuple(_sq1, 15s)])
+        Tuple(_sq1, 20s)])
 
 Define("EventsToScramblingEvents",
        [Tuple(_333, _333),
